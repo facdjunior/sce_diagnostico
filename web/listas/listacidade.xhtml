@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+    <ui:decorate template="/index.xhtml">
+        <ui:define name="centro">
+            <p:dataTable value="#{cidadeBean.listaCidade}" var="cid">
+                
+                <p:column headerText="Código" styleClass="AlinhamentoTabela">
+                    <p:outputLabel value="#{cid.codigo}"/>
+                </p:column>
+                
+                <p:column headerText="Nome" styleClass="AlinhamentoTabela">
+                    <p:outputLabel value="#{cid.nome}"/>
+                </p:column>
+                
+                <p:column headerText="UF" styleClass="AlinhamentoTabela">
+                    <p:outputLabel value="#{cid.uf_codigo}"/>
+                </p:column>
+                
+                <p:column headerText="Cód. IBGE" styleClass="AlinhamentoTabela">
+                    <p:outputLabel value="#{uf.codibge}"/>
+                </p:column>
+                
+                <p:column headerText="Editar" styleClass="AlinhamentoTabela" resizable="false" width="65">
+                    <p:commandLink action="/Cadastro/editarEstado" actionListener="#{estadoBean.selecionarContato()}">
+                        <p:graphicImage value="/imagem/editar.png" width="36" height="36"/>
+                    </p:commandLink>
+                </p:column>
+                
+                <p:column headerText="Excluir" styleClass="AlinhamentoTabela" resizable="false" width="65">
+                    <p:commandLink action="/Cadastro/excluirEstado" actionListener="#{estadoBean.selecionarContato()}">
+                        <p:graphicImage value="/imagem/delete.jpg" width="36" height="36"/>
+                    </p:commandLink>
+                </p:column>
+            </p:dataTable>
+        </ui:define>
+    </ui:decorate>
+</html>
+
+

@@ -1,0 +1,28 @@
+.TituloIndex{
+    font-size: 56px;
+    font-family: Comic Sans MS;
+    font-weight: bold;
+    color: blue;
+    
+}
+
+.AlinhamentoTabela{
+    text-align: center;
+    color: black;
+    font-weight: bold;
+}
+
+.ExcluirContato{
+    font-size: 26px;
+    font-family: Arial;
+    font-weight: bold;
+    color: brown;
+    
+}
+.ExcluirContato1{
+    font-size: 26px;
+    font-family: Arial;
+    font-weight: bold;
+    color: black;
+    
+}
